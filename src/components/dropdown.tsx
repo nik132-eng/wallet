@@ -8,7 +8,6 @@ import shareDrop from "../assets/share-drop.svg";
 import collapesDrop from "../assets/collapes-drop.svg";
 const Dropdown = () => {
   const [showMenu, setShowMenu] = useState(false);
-  console.log("showMenu -", showMenu);
   const showDropdown = () => {
     setShowMenu(!showMenu);
   };

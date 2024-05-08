@@ -10,17 +10,63 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import btclogo from "../assets/bitcoin-btc-logo.png";
 import Dropdown from "./dropdown";
-import AreaChartComponent from "./areachart";
 import dollerblue from "../assets/dollar-blue.png";
 import dollerpink from "../assets/doller-sign-pink.png";
 import { useState } from "react";
+import AreaChartComponent, { DataPoint } from './areachart';
+
+interface Data {
+  [key: string]: DataPoint[];
+}
+
+const initialData: Data = {
+  Day: [
+    { name: "Page A", BTC: 4000, amt: 2400 },
+    { name: "Page B", BTC: 300, amt: 2210 },
+    { name: "Page C", BTC: 2000, amt: 2290 },
+    { name: "Page D", BTC: 780, amt: 2000 },
+    { name: "Page E", BTC: 1890, amt: 2181 },
+    { name: "Page F", BTC: 2390, amt: 2500 },
+    { name: "Page G", BTC: 3490, amt: 2100 }
+  ],
+  Week: [
+    { name: "Page A", BTC: 4500, amt: 2400 },
+    { name: "Page B", BTC: 3200, amt: 2210 },
+    { name: "Page C", BTC: 2300, amt: 2290 },
+    { name: "Page D", BTC: 980, amt: 2000 },
+    { name: "Page E", BTC: 2090, amt: 2181 },
+    { name: "Page F", BTC: 290, amt: 2500 },
+    { name: "Page G", BTC: 3590, amt: 2100 }
+  ],
+  Month: [
+    { name: "Page A", BTC: 6000, amt: 2400 },
+    { name: "Page B", BTC: 4700, amt: 2210 },
+    { name: "Page C", BTC: 3500, amt: 2290 },
+    { name: "Page D", BTC: 480, amt: 2000 },
+    { name: "Page E", BTC: 3290, amt: 2181 },
+    { name: "Page F", BTC: 3790, amt: 2500 },
+    { name: "Page G", BTC: 479, amt: 2100 }
+  ],
+  Year: [
+    { name: "Page A", BTC: 8000, amt: 2400 },
+    { name: "Page B", BTC: 6500, amt: 2210 },
+    { name: "Page C", BTC: 500, amt: 2290 },
+    { name: "Page D", BTC: 5680, amt: 2000 },
+    { name: "Page E", BTC: 4790, amt: 2181 },
+    { name: "Page F", BTC: 590, amt: 2500 },
+    { name: "Page G", BTC: 6290, amt: 2100 }
+  ]
+};
 
 const Wallet = () => {
   const [selectedIcon, setSelectedIcon] = useState("wallet");
   const [selectedItem, setSelectedItem] = useState("Week");
 
+  const [data, setData] = useState<DataPoint[]>(initialData[selectedItem]);
+
   const handleItemClick = (item: any) => {
     setSelectedItem(item);
+    setData(initialData[item]);
   };
   const handleIconClick = (iconName: any) => {
     setSelectedIcon(iconName);
@@ -94,7 +140,7 @@ const Wallet = () => {
             </div>
           </div>
           <div className="graph">
-            <AreaChartComponent width={330} height={250} />
+            <AreaChartComponent data={data} width={330} height={250} />
           </div>
         </div>
         <div className="buy-sell">

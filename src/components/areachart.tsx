@@ -1,24 +1,21 @@
 import { PureComponent } from 'react';
 import { Tooltip, AreaChart, Area } from "recharts";
 
-const data = [
-    { name: "Page A", BTC: 4000 , amt: 2400 },
-    { name: "Page B", BTC: 3000, amt: 2210 },
-    { name: "Page C", BTC: 2000, amt: 2290 },
-    { name: "Page D", BTC: 2780, amt: 2000 },
-    { name: "Page E", BTC: 1890, amt: 2181 },
-    { name: "Page F", BTC: 2390, amt: 2500 },
-    { name: "Page G", BTC: 3490, amt: 2100 }
-];
-
 interface AreaChartProps {
     width: number;
     height: number;
+    data: any;
 }
+export interface DataPoint {
+    name: string;
+    BTC: number;
+    amt: number;
+  }
+  
 
 export default class AreaChartComponent extends PureComponent<AreaChartProps> {
     render() {
-        const { width, height } = this.props;
+        const { width, height, data } = this.props;
         return (
             <AreaChart
                 width={width}
