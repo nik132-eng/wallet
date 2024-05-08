@@ -31,63 +31,65 @@ const Wallet = () => {
         <div>
           <FontAwesomeIcon icon={faChevronLeft} />
         </div>
-        <div>Bitcoin Wallet</div>
+        <span>Bitcoin Wallet</span>
         <Dropdown />
       </div>
-      <div className="container-body card">
-        <div className="box-shadow">
-          <div className="box-top">
-            <div className="coin-header-logo">
-              <div className="logo">
-                <img src={btclogo} />
+      <div className="body">
+        <div className="container-body card">
+          <div className="box-shadow">
+            <div className="box-top">
+              <div className="coin-header-logo">
+                <div className="logo">
+                  <img src={btclogo} />
+                </div>
+                <div>Bitcoin</div>
               </div>
-              <div>Bitcoin</div>
+              <div>BTC</div>
             </div>
-            <div>BTC</div>
-          </div>
-          <div className="box-middle">3.2345344 BTC</div>
-          <div className="box-bottom">
-            <div className="usd-price">$16.9898 USD</div>
-            <div className="variation">-2.345%</div>
-          </div>
-          <div className="dropdownarrow">
-            <FontAwesomeIcon icon={faAngleDown} />
-          </div>
-        </div>
-      </div>
-      <div className="selection-time">
-        <div className={selectedItem === 'Day' ? 'selected' : ''} onClick={() => handleItemClick('Day')}>Day</div>
-        <div className={selectedItem === 'Week' ? 'selected' : ''} onClick={() => handleItemClick('Week')}>Week</div>
-        <div className={selectedItem === 'Month' ? 'selected' : ''} onClick={() => handleItemClick('Month')}>Month</div>
-        <div className={selectedItem === 'Year' ? 'selected' : ''} onClick={() => handleItemClick('Year')}>Year</div>
-      </div>
-      <div className="container-body card">
-        <div className="high-low-value">
-          <div>
-            <span className="dot green"></span>
-            lower: $875.32
-          </div>
-          <div>
-            <span className="dot red"></span>
-            higher: $6857
+            <div className="box-middle">3.2345344 BTC</div>
+            <div className="box-bottom">
+              <div className="usd-price">$16.9898 USD</div>
+              <div className="variation">-2.345%</div>
+            </div>
+            <div className="dropdownarrow">
+              <FontAwesomeIcon icon={faAngleDown} />
+            </div>
           </div>
         </div>
-        <div className="graph">
-          <AreaChartComponent width={430} height={250} />
+        <div className="selection-time">
+          <div className={selectedItem === 'Day' ? 'selected' : ''} onClick={() => handleItemClick('Day')}>Day</div>
+          <div className={selectedItem === 'Week' ? 'selected' : ''} onClick={() => handleItemClick('Week')}>Week</div>
+          <div className={selectedItem === 'Month' ? 'selected' : ''} onClick={() => handleItemClick('Month')}>Month</div>
+          <div className={selectedItem === 'Year' ? 'selected' : ''} onClick={() => handleItemClick('Year')}>Year</div>
         </div>
-      </div>
-      <div className="buy-sell">
-        <div className="container-body">
-          <div>
-            <img src={dollerblue} width="60px" />
+        <div className="container-body card">
+          <div className="high-low-value">
+            <div>
+              <span className="dot red"></span>
+              lower: $875.32
+            </div>
+            <div>
+              <span className="dot green"></span>
+              higher: $6857
+            </div>
           </div>
-          <div>Buy BTC</div>
+          <div className="graph">
+            <AreaChartComponent width={430} height={250} />
+          </div>
         </div>
-        <div className="container-body">
-          <div>
-            <img src={dollerpink} width="60px" />
+        <div className="buy-sell">
+          <div className="container-body left">
+            <div>
+              <img src={dollerblue} width="60px" />
+            </div>
+            <span>Buy BTC</span>
           </div>
-          <div>sell BTC</div>
+          <div className="container-body right">
+            <div>
+              <img src={dollerpink} width="60px" />
+            </div>
+            <span>Sell BTC</span>
+          </div>
         </div>
       </div>
       <div className="container-footer">
