@@ -1,15 +1,17 @@
-import React from "react";
 import "./wallet.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEllipsisV, faChevronLeft , faWallet, faCompass, faBell, faGear, faAngleDown} from '@fortawesome/free-solid-svg-icons';
+
 
 const Wallet = () => {
   return (
     <div className="container">
       <div className="container-header">
-        <div>back</div>
-        <div>heading</div>
-        <div>options</div>
+        <div><FontAwesomeIcon icon={faChevronLeft} /></div>
+        <div>Bitcoin Wallet</div>
+        <div><FontAwesomeIcon icon={faEllipsisV} /></div>
       </div>
-      <div className="container-body">
+      <div className="container-body card">
         <div className="box-shadow">
           <div className="box-top">
             <div className="coin-header-logo">
@@ -25,7 +27,7 @@ const Wallet = () => {
             <div className="usd-price">$16.9898 USD</div>
             <div className="variation">-2.345%</div>
           </div>
-          <div>dropdown icon</div>
+          <div><FontAwesomeIcon icon={faAngleDown} /></div>
         </div>
       </div>
       <div className="selection-time">
@@ -34,7 +36,7 @@ const Wallet = () => {
         <div>Month</div>
         <div>Year</div>
       </div>
-      <div className="container-body">
+      <div className="container-body card">
         <div className="high-low-value">
             <div>low</div>
              <div>high</div>   
@@ -55,10 +57,10 @@ const Wallet = () => {
       </div>
       <div className="container-footer">
         <div className="selection-footer">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
+            <div><FontAwesomeIcon icon={faWallet} /></div>
+            <div><FontAwesomeIcon icon={faCompass} /></div>
+            <div><FontAwesomeIcon icon={faBell} /></div>
+            <div><FontAwesomeIcon icon={faGear} /></div>
         </div>
       </div>
     </div>
