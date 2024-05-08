@@ -1,10 +1,14 @@
 import "./wallet.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEllipsisV, faChevronLeft , faWallet, faCompass, faBell, faGear, faAngleDown} from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft , faWallet, faCompass, faBell, faGear, faAngleDown} from '@fortawesome/free-solid-svg-icons';
 import btclogo from '../assets/bitcoin-btc-logo.png'
 import Dropdown from "./dropdown";
+import AreaChartComponent from "./areachart";
+import dollerblue from '../assets/dollar-blue.png'
+import dollerpink from '../assets/doller-sign-pink.png'
 
 const Wallet = () => {
+
   return (
     <div className="container">
       <div className="container-header">
@@ -39,21 +43,27 @@ const Wallet = () => {
         <div>Year</div>
       </div>
       <div className="container-body card">
-        <div className="high-low-value">
-            <div>low</div>
-             <div>high</div>   
-        </div>
+      <div className="high-low-value">
+  <div>
+    <span className="dot green"></span>
+    lower: $875.32
+  </div>
+  <div>
+    <span className="dot red"></span>
+    higher: $6857
+  </div>
+</div>
         <div className="graph">
-            show graph here
+        <AreaChartComponent width={430} height={250} />
         </div>
       </div>
       <div className="buy-sell">
             <div className="container-body">
-                <div>Img</div>
+                <div><img src={dollerblue}  width="30px"/></div>
                 <div>Buy BTC</div>
             </div>
             <div className="container-body">
-                <div>Img</div>
+                <div><img src={dollerpink} width="30px"/></div>
                 <div>sell BTC</div>
             </div>
       </div>

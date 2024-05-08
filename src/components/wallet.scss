@@ -63,3 +63,24 @@
     justify-content: space-around;
   }
 }
+
+.high-low-value{
+  display: flex;
+  justify-content: space-around;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
