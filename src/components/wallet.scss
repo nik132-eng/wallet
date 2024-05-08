@@ -1,4 +1,4 @@
-.container{
+.container {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -8,7 +8,7 @@
   padding: 20px;
 }
 
-.container-header{
+.container-header {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -16,31 +16,50 @@
   width: 100%;
 }
 
-.container-body{
-  -webkit-box-shadow: 0px 0px 50px -6px rgba(0,0,0,0.63);
-  -moz-box-shadow: 0px 0px 50px -6px rgba(0,0,0,0.63);
-  box-shadow: 0px 0px 50px -6px rgba(0,0,0,0.63);
+.container-body {
+  -webkit-box-shadow: 0px 0px 50px -6px rgba(0, 0, 0, 0.63);
+  -moz-box-shadow: 0px 0px 50px -6px rgba(0, 0, 0, 0.63);
+  box-shadow: 0px 0px 50px -6px rgba(0, 0, 0, 0.63);
   margin: 20px auto;
 }
 
-.card{
+.card {
   min-width: 90%;
 }
 
-.selection-time{
+.box-top {
+  display: flex;
+  justify-content: space-between;
+  .coin-header-logo {
+    display: flex;
+    gap: 5px;
+  }
+  .logo {
+    img {
+      width: 30px;
+    }
+  }
+}
+.box-bottom{
+  display: flex;
+  justify-content: space-between;
+}
+.dropdownarrow{
+  display: flex;
+  justify-content: center;
+}
+.selection-time {
   display: flex;
   justify-content: space-around;
 }
 
-.buy-sell{
+.buy-sell {
   display: flex;
-
 }
 
-.container-footer{
-  .selection-footer{
+.container-footer {
+  .selection-footer {
     display: flex;
     justify-content: space-around;
-
   }
 }
