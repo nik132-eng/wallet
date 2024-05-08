@@ -16,8 +16,8 @@ import dollerpink from "../assets/doller-sign-pink.png";
 import { useState } from "react";
 
 const Wallet = () => {
-  const [selectedIcon, setSelectedIcon] = useState('wallet');
-  const [selectedItem, setSelectedItem] = useState('Week');
+  const [selectedIcon, setSelectedIcon] = useState("wallet");
+  const [selectedItem, setSelectedItem] = useState("Week");
 
   const handleItemClick = (item: any) => {
     setSelectedItem(item);
@@ -44,7 +44,7 @@ const Wallet = () => {
                 </div>
                 <div>Bitcoin</div>
               </div>
-              <div>BTC</div>
+              <span>BTC</span>
             </div>
             <div className="box-middle">3.2345344 BTC</div>
             <div className="box-bottom">
@@ -57,10 +57,30 @@ const Wallet = () => {
           </div>
         </div>
         <div className="selection-time">
-          <div className={selectedItem === 'Day' ? 'selected' : ''} onClick={() => handleItemClick('Day')}>Day</div>
-          <div className={selectedItem === 'Week' ? 'selected' : ''} onClick={() => handleItemClick('Week')}>Week</div>
-          <div className={selectedItem === 'Month' ? 'selected' : ''} onClick={() => handleItemClick('Month')}>Month</div>
-          <div className={selectedItem === 'Year' ? 'selected' : ''} onClick={() => handleItemClick('Year')}>Year</div>
+          <div
+            className={selectedItem === "Day" ? "selected" : ""}
+            onClick={() => handleItemClick("Day")}
+          >
+            Day
+          </div>
+          <div
+            className={selectedItem === "Week" ? "selected" : ""}
+            onClick={() => handleItemClick("Week")}
+          >
+            Week
+          </div>
+          <div
+            className={selectedItem === "Month" ? "selected" : ""}
+            onClick={() => handleItemClick("Month")}
+          >
+            Month
+          </div>
+          <div
+            className={selectedItem === "Year" ? "selected" : ""}
+            onClick={() => handleItemClick("Year")}
+          >
+            Year
+          </div>
         </div>
         <div className="container-body card">
           <div className="high-low-value">
@@ -74,7 +94,7 @@ const Wallet = () => {
             </div>
           </div>
           <div className="graph">
-            <AreaChartComponent width={430} height={250} />
+            <AreaChartComponent width={330} height={250} />
           </div>
         </div>
         <div className="buy-sell">
@@ -93,21 +113,33 @@ const Wallet = () => {
         </div>
       </div>
       <div className="container-footer">
-      <div className="selection-footer">
-        <div onClick={() => handleIconClick('wallet')} className={selectedIcon === 'wallet' ? 'selected' : ''}>
-          <FontAwesomeIcon icon={faWallet} style={{ fontSize: '32px' }} />
-        </div>
-        <div onClick={() => handleIconClick('compass')} className={selectedIcon === 'compass' ? 'selected' : ''}>
-          <FontAwesomeIcon icon={faCompass} style={{ fontSize: '32px' }} />
-        </div>
-        <div onClick={() => handleIconClick('bell')} className={selectedIcon === 'bell' ? 'selected' : ''}>
-          <FontAwesomeIcon icon={faBell} style={{ fontSize: '32px' }} />
-        </div>
-        <div onClick={() => handleIconClick('gear')} className={selectedIcon === 'gear' ? 'selected' : ''}>
-          <FontAwesomeIcon icon={faGear} style={{ fontSize: '32px' }} />
+        <div className="selection-footer">
+          <div
+            onClick={() => handleIconClick("wallet")}
+            className={selectedIcon === "wallet" ? "selected" : ""}
+          >
+            <FontAwesomeIcon icon={faWallet} style={{ fontSize: "32px" }} />
+          </div>
+          <div
+            onClick={() => handleIconClick("compass")}
+            className={selectedIcon === "compass" ? "selected" : ""}
+          >
+            <FontAwesomeIcon icon={faCompass} style={{ fontSize: "32px" }} />
+          </div>
+          <div
+            onClick={() => handleIconClick("bell")}
+            className={selectedIcon === "bell" ? "selected" : ""}
+          >
+            <FontAwesomeIcon icon={faBell} style={{ fontSize: "32px" }} />
+          </div>
+          <div
+            onClick={() => handleIconClick("gear")}
+            className={selectedIcon === "gear" ? "selected" : ""}
+          >
+            <FontAwesomeIcon icon={faGear} style={{ fontSize: "32px" }} />
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };

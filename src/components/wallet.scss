@@ -84,6 +84,10 @@
       width: 40px;
     }
   }
+  span {
+    color: #999;
+    font-weight: 600;
+  }
 }
 .box-bottom {
   display: flex;
@@ -96,6 +100,7 @@
 .selection-time {
   display: flex;
   justify-content: space-around;
+  color: #999;
 }
 .selection-time div {
   cursor: pointer;
@@ -119,10 +124,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  .left{
+  .left {
     margin-right: 10px !important;
   }
-  .right{
+  .right {
     margin-left: 10px !important;
   }
   .container-body {
@@ -130,13 +135,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 30px 70px;
+    padding: 5% 10%;
     flex-wrap: wrap;
   }
-  .container-body > span{
+  .container-body > span {
     font-size: 20px;
     font-weight: 500;
-    padding-top:10px;
+    padding-top: 10px;
     white-space: nowrap;
   }
 }
