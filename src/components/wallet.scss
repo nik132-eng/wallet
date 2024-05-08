@@ -21,22 +21,42 @@
   -moz-box-shadow: 0px 0px 50px -6px rgba(0, 0, 0, 0.63);
   box-shadow: 0px 0px 50px -6px rgba(0, 0, 0, 0.63);
   margin: 20px auto;
+  border-radius: 30px;
+
+  .box-shadow{
+    padding: 30px;
+  }
 }
 
 .card {
   min-width: 90%;
 }
+.selection-footer div {
+  cursor: pointer;
+  color: #999; 
+  margin-right: 10px; 
+}
+
+.selection-footer div:hover {
+  color: #007bff;
+}
+
+.selection-footer div.selected {
+  color: #000; 
+}
+
 
 .box-top {
   display: flex;
   justify-content: space-between;
   .coin-header-logo {
     display: flex;
-    gap: 5px;
+    gap: 15px;
+    align-items: center;
   }
   .logo {
     img {
-      width: 30px;
+      width: 40px;
     }
   }
 }
@@ -52,12 +72,39 @@
   display: flex;
   justify-content: space-around;
 }
+.selection-time div {
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 30px;
+}
+
+.selection-time div:hover {
+  background-color: #999;
+  color: #fff;
+}
+
+.selection-time div.selected {
+  background-color: #999;
+  color: #fff;
+}
+
 
 .buy-sell {
   display: flex;
+  .container-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 70px; 
+    border-radius: 30px;
+  }
 }
 
 .container-footer {
+  margin-top: 30px;
+  
   .selection-footer {
     display: flex;
     justify-content: space-around;
@@ -67,6 +114,7 @@
 .high-low-value{
   display: flex;
   justify-content: space-around;
+  padding-top: 40px;
 }
 
 .dot {
