@@ -2,6 +2,7 @@ import "./wallet.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisV, faChevronLeft , faWallet, faCompass, faBell, faGear, faAngleDown} from '@fortawesome/free-solid-svg-icons';
 import btclogo from '../assets/bitcoin-btc-logo.png'
+import Dropdown from "./dropdown";
 
 const Wallet = () => {
   return (
@@ -9,7 +10,8 @@ const Wallet = () => {
       <div className="container-header">
         <div><FontAwesomeIcon icon={faChevronLeft} /></div>
         <div>Bitcoin Wallet</div>
-        <div><FontAwesomeIcon icon={faEllipsisV} /></div>
+        <div></div>
+        <Dropdown />
       </div>
       <div className="container-body card">
         <div className="box-shadow">
