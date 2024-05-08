@@ -1,5 +1,42 @@
-$myColor: red;
+.container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;
+  background-color: aliceblue;
+  padding: 20px;
+}
 
-h1 {
-  color: $myColor;
+.container-header{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.container-body{
+  -webkit-box-shadow: 0px 0px 50px -6px rgba(0,0,0,0.63);
+  -moz-box-shadow: 0px 0px 50px -6px rgba(0,0,0,0.63);
+  box-shadow: 0px 0px 50px -6px rgba(0,0,0,0.63);
+  margin: 20px auto;
+}
+
+.selection-time{
+  display: flex;
+  justify-content: space-around;
+}
+
+.buy-sell{
+  display: flex;
+
+}
+
+.container-footer{
+  .selection-footer{
+    display: flex;
+    justify-content: space-around;
+
+  }
 }

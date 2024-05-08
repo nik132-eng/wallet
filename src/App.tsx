@@ -4,9 +4,9 @@ import Wallet from './components/wallet'
 function App() {
 
   return (
-    <>
+    <div className='wrapper'>
       <Wallet />
-    </>
+    </div>
   )
 }
 
